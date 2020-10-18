@@ -492,12 +492,9 @@ decompile () {
 }
 
 clean () {
-    rm -rf -- "${OUTPUT_PATH}"
-    kaleidoscope_dir="$(dirname "$0")/.."
-    (install -d "${kaleidoscope_dir}/testing/googletest/build" &&
-         cd "${kaleidoscope_dir}/testing/googletest/build" &&
-         cmake .. &&
-         make clean)
+    if [ -d "$OUTPUT_PATH" ]; then
+      rm -rf -- "${OUTPUT_PATH}"
+   fi
 }
 
 reset_device() {
