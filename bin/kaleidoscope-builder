@@ -484,7 +484,7 @@ do_compile_with_builder() {
 	      -build-path "${BUILD_PATH}" \
 	      -ide-version "${ARDUINO_IDE_VERSION}" \
 	      -built-in-libraries "${ARDUINO_PATH}/libraries" \
-	      -prefs compiler.cpp.extra_flags="${ARDUINO_CFLAGS} ${LOCAL_CFLAGS}" \
+	      -prefs "compiler.cpp.extra_flags=$(printf "%q", "${ARDUINO_CFLAGS} ${LOCAL_CFLAGS}")" \
 	      -prefs compiler.path="${COMPILER_PATH}" \
 	      -prefs compiler.c.cmd="${_CMD_CC}" \
 	      -prefs compiler.cpp.cmd="${_CMD_CXX}" \
