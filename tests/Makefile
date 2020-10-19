@@ -4,7 +4,7 @@ LIB_DIR		:= ${build_dir}/lib
 
 libcommon_a	:= ${top_dir}/_build/lib/libcommon.a
 
-TESTS			?= $(shell find . -name 'sketch.ino' -exec dirname {} \;)
+TESTS			?= $(shell find . -name '*.ino' -exec dirname {} \;)
 .PHONY: clean cmake-clean all googletest
 
 all: ${TESTS}
