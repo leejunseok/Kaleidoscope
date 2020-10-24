@@ -72,6 +72,10 @@ endif
 include $(BOARD_HARDWARE_PATH)/$(KALEIDOSCOPE_PLUGIN_MAKEFILE_DIR)/sketch-arduino-cli.mk
 
 
+PLUGIN_TEST_SUPPORT_DIR ?= $(BOARD_HARDWARE_PATH)/keyboardio/build-tools/
+PLUGIN_TEST_BIN_DIR ?= $(PLUGIN_TEST_SUPPORT_DIR)/../toolchain/$(shell gcc --print-multiarch)/bin
+
+
 prepare-virtual:
 	$(MAKE) -C $(BOARD_HARDWARE_PATH)/keyboardio prepare-virtual
 
