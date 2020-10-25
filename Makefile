@@ -71,7 +71,7 @@ $(info *************************************************************************
 $(info )
 endif
 
-include $(BOARD_HARDWARE_PATH)/$(KALEIDOSCOPE_ETC_DIR)/sketch-arduino-cli.mk
+include $(KALEIDOSCOPE_ETC_DIR)/sketch-arduino-cli.mk
 
 
 PLUGIN_TEST_SUPPORT_DIR ?= $(BOARD_HARDWARE_PATH)/keyboardio/build-tools/
